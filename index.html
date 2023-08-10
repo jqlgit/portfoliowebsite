@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title> Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/afe17cc76e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<div id ="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class = "header-text">
+                <p>Software Engineer</p>
+                <h1>Hi, I'm <span>Justin Li</span></h1>
+                <h2><span class = "auto-type"></span></h1>
+        </div>
+    </div>
+</div>
+<!---------------about--------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> As a developer, I possess an impressive arsenal of skills in React.js, Python, HTML, CSS, Javascript, Java, Bootstrap, and C. 
+                    I excel in designing and maintaining responsive websites that offer a smooth user experience. 
+                    My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. 
+                    I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding, robust applications.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>Full-stack Development</span><br>Front-end and Back-end Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022-2023</span><br>Web Development at the University System of Georgia Board of Regents</li>
+                        <li><span>2022-2023</span><br>CTF Cybersecurity</li>
+                        <li><span>2022-2023</span><br>Carolina Analytics and Data Science</li>
+                        <li><span>2022-2023</span><br>Busi-Tech</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-Present</span><br>University of North Carolina At Chapel Hill</li>
+                        <li><span>2023</span><br>Meta Front-End Developer Professional Certification</li>
+                        <li><span>2023</span><br>Harvard University CS50</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------services------------>
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Back-end Development</h2>
+                <p>
+                    Skilled back-end developer specializing in server-side architecture, proficient in Python, Java, Node.js, SQL, etc.. 
+                    Collaborative team player, focused on efficient APIs and databases. 
+                    Committed to delivering reliable, scalable solutions.</p>
+                <!--<a href="#">Learn more</a>-->
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Front-end Development</h2>
+                <p>Skilled front-end developer adept at crafting engaging web interfaces using HTML, CSS, and JavaScript, with expertise in React. 
+                    Proven collaboration skills in groups to generate a robust product. 
+                    Committed to innovation and delivering impactful digital solutions.</p>
+                <!--<a href="#">Learn more</a>-->
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>App and UI/UX Design</h2>
+                <p>Developer with a flair for creating intuitive and visually appealing user interfaces. 
+                   Detail-oriented and collaborative team player, dedicated to crafting high-quality code that brings designs to life and enhances user satisfaction.</p>
+                <!--<a href="#">Learn more</a>-->
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------portfolio---------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Data Structures and Algorithms</h3>
+                    <p>Demonstate expertise in Binary Search Trees, algorithms, Trie structures, Red-Black Trees, Linked Lists, arrays, stacks, queues, graphs, and various sorting techniques like Merge Sort. 
+                       Knowledgable in Big O, time complexities, and space complexities.</p>
+                    <a href="https://github.com/jqlgit/java_projects/tree/master/src"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Stock Trading App</h3>
+                    <p>App for trading with reliable user interface, user data collection, and password security system.</p>
+                    <h4>Techstack: <span>Python, HTML, CSS, Javascript, SQL, Bootstrap, Flask </span></h4>
+                    <a href="https://github.com/code50/111467072/tree/main/finance"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://youtu.be/MaI9yzLSEBQ"><i class="fa-brands fa-youtube"></i></i></i></a>
+                </div>
+
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Online E-Commerce Sneaker Shopping App</h3>
+                    <p>Interactive sneaker e-commerce app with user cart system interface.</p>
+                    <h4>Techstack: <span>React.js, CSS</span></h4>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href=#><i class="fa-solid fa-laptop"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-4.png">
+                <div class="layer">
+                    <h3>Project Portfolio Website</h3>
+                    <p>Dynamic portfolio website with contact system.</p>
+                    <h4>Techstack: <span>HTML, CSS, Javascript</span></h4>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-5.png">
+                <div class="layer">
+                    <h3>ChatGPT</h3>
+                    <p>Front-end and back-end recreation of ChatGPT using OpenAI's API. Custom GPT versions.
+                    </p>
+                    <h4>Techstack: <span>React.js, Express.js, Node.js, HTML, CSS</span></h4>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://youtu.be/5ApTUIsqZmg"><i class="fa-brands fa-youtube"></i></i></i></a>
+                    <a href=#><i class="fa-solid fa-laptop"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-6.png">
+                <div class="layer">
+                    <h3>Furniture E-Commerce</h3>
+                    <p>Online E-Commerce centered on user experience. Dynamic cart system and site design allow for easy customer use.</p>
+                    <h4>Techstack: <span>React.js, CSS</span></h4>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href=#><i class="fa-solid fa-laptop"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-7.png">
+                <div class="layer">
+                    <h3>Contagion Simulation</h3>
+                    <p>Visual simulation inspired by Washington Post's article's visualization of infectious diseases.</p>
+                    <h4>Techstack: <span>Python</span></h4>
+                    <a href="https://github.com/jqlgit/python_projects/tree/master/exercises/ex09"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-8.png">
+                <div class="layer">
+                    <h3>Password Manager</h3>
+                    <p>Password manager to create, store, and check usernames and passwords using hashing.</p>
+                    <h4>Techstack: <span>Java</span></h4>
+                    <a href="https://github.com/jqlgit/java_projects/tree/master/src/hashingpasswordstorageservice_proj"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/jqlgit?tab=repositories" class="btn">See more</a>
+    </div>
+</div>
+<!-------------contact-------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> jql@ad.unc.edu</p>
+                <p><i class="fa-solid fa-square-phone-flip"></i> 334-733-0406</p>
+                <div class="social-icons">
+                    <a href="https://github.com/jqlgit?tab=repositories"><i class="fa-brands fa-github"></i></i></a>
+                    <a href="https://www.linkedin.com/in/justinqli/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> Copyright <i class="fa-regular fa-copyright"></i> Made by Justin Li</p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby8Uo2ba1GCkeFRQRXA3OjNhPry3a_WM_TiZG_P_BPC2yteC497OjaPge1UEnWj3Nea/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset();
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+  <script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Programmer", "Leader", "Student", "Developer", "Innovator", "Designer"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+    })
+  </script>
+  
+</body>
+</html>
