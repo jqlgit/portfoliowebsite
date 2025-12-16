@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORCH - Justin Li</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/afe17cc76e.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container">
+            <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+            
+            <header class="blog-header">
+                <h1>PORCH</h1>
+                <p class="blog-tagline">Food Donation Coordination and Management Tool for community hunger relief</p>
+                <p class="blog-meta">Mobile Application</p>
+            </header>
+
+            <div class="blog-content">
+                <section class="blog-section">
+                    <h2>Abstract</h2>
+                    <p>
+                        PORCH is an iOS application designed to streamline food donation coordination and volunteer management for communities working toward hunger relief. The platform has contributed to $6.5 million in hunger relief efforts by enabling efficient real-time communication between donors, volunteers, and community organizations.
+                    </p>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Features</h2>
+                    <ul class="features-list">
+                        <li>Message blasting functionality via Twilio</li>
+                        <li>Volunteer organization and coordination</li>
+                        <li>Data collection and analytics</li>
+                        <li>Real-time communication</li>
+                        <li>Community engagement tools</li>
+                        <li>$6.5 million in hunger relief contribution</li>
+                    </ul>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Tech Stack</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Swift</span>
+                        <span class="tech-tag">SwiftUI</span>
+                        <span class="tech-tag">Twilio</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">SF Symbols</span>
+                    </div>
+                </section>
+
+                <section class="blog-section blog-body">
+                    <h2>The Challenge</h2>
+                    <p>
+                        Building a reliable message blasting system while maintaining data integrity across volunteer networks required seamless Twilio integration and robust Firebase backend architecture. The system needed to handle thousands of concurrent users and ensure no donation request went unanswered.
+                    </p>
+
+                    <h3>Architecture & Design</h3>
+                    <p>
+                        PORCH was built with SwiftUI for a modern, intuitive iOS experience. The app leverages Firebase for real-time database synchronization, ensuring that donation opportunities and volunteer status updates reach users instantly. Twilio integration enables mass notification capabilities without overwhelming infrastructure.
+                    </p>
+                    <p>
+                        The backend maintains data consistency across distributed volunteers through careful state management and conflict resolution. Analytics capabilities track food distribution patterns and volunteer engagement metrics, providing insights to community leaders.
+                    </p>
+
+                    <h3>Impact</h3>
+                    <p>
+                        Since launch, PORCH has facilitated coordination of food donations resulting in $6.5 million in hunger relief. The app demonstrates how technology can bridge the gap between those who want to help and those in need, creating a sustainable model for community support.
+                    </p>
+                </section>
+            </div>
+
+            <footer class="blog-footer">
+                <div class="blog-links">
+                    <a href="https://github.com/jqlgit" target="_blank" rel="noopener noreferrer" class="blog-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="../portfolio.html" class="blog-link">Back to Portfolio</a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Justin Li. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/shared.js"></script>
+</body>
+</html>

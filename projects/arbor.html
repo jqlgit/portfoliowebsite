@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbor - Justin Li</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/afe17cc76e.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container">
+            <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+            
+            <header class="blog-header">
+                <h1>Arbor</h1>
+                <p class="blog-tagline">Product Deployment Automation Framework using Helix, Ansible, and Kafka</p>
+                <p class="blog-meta">Enterprise Automation</p>
+            </header>
+
+            <div class="blog-content">
+                <section class="blog-section">
+                    <h2>Abstract</h2>
+                    <p>
+                        Arbor is an enterprise-grade deployment automation framework that streamlines middleware delivery across teams using Helix Orchestration and Dockerized packages with sophisticated edge-case detection. The system reduced mean time-to-resolution by 40% and achieved 90% use case coverage with improved delivery speed.
+                    </p>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Features</h2>
+                    <ul class="features-list">
+                        <li>Automated middleware delivery with Helix Orchestration</li>
+                        <li>Java API for deployment error parsing using regex</li>
+                        <li>Kafka topic integration for corrective playbooks</li>
+                        <li>Dockerized package management</li>
+                        <li>Image-based deployment for RedHat systems</li>
+                        <li>40% reduction in mean time-to-resolution</li>
+                        <li>90% use case coverage with improved delivery speed</li>
+                    </ul>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Tech Stack</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Ansible</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Helix</span>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">ServiceNow</span>
+                        <span class="tech-tag">BigPanda</span>
+                        <span class="tech-tag">Apache Kafka</span>
+                    </div>
+                </section>
+
+                <section class="blog-section blog-body">
+                    <h2>The Challenge</h2>
+                    <p>
+                        Developing a robust error detection and correction system that works across diverse middleware environments required extensive regex pattern design and Kafka topic architecture optimization. The main challenge was creating a system intelligent enough to handle edge cases while maintaining reliability across different deployment scenarios.
+                    </p>
+
+                    <h3>Solution Architecture</h3>
+                    <p>
+                        The framework leverages Helix Orchestration as the central conductor, managing deployment workflows across multiple RedHat systems. At the core, a sophisticated Java API parses deployment errors using advanced regex patterns, identifying failure types and severity levels in real-time.
+                    </p>
+                    <p>
+                        When errors are detected, the system publishes corrective actions to Apache Kafka topics, which trigger automated remediation playbooks via Ansible. This event-driven architecture ensures rapid response to failures while maintaining an audit trail of all corrections through Splunk and ServiceNow integration.
+                    </p>
+
+                    <h3>Impact</h3>
+                    <p>
+                        The implementation resulted in a 40% reduction in mean time-to-resolution (MTTR), enabling teams to recover from deployment failures significantly faster. The framework achieved 90% coverage of known failure scenarios, drastically reducing manual intervention requirements and improving overall system reliability.
+                    </p>
+                </section>
+            </div>
+
+            <footer class="blog-footer">
+                <div class="blog-links">
+                    <a href="https://github.com/jqlgit" target="_blank" rel="noopener noreferrer" class="blog-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="../portfolio.html" class="blog-link">Back to Portfolio</a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Justin Li. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/shared.js"></script>
+</body>
+</html>

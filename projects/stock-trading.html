@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trading App - Justin Li</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/afe17cc76e.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container">
+            <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+            
+            <header class="blog-header">
+                <h1>Stock Trading App</h1>
+                <p class="blog-tagline">Full-stack trading platform with real-time stock data and secure transaction handling</p>
+                <p class="blog-meta">Web Application</p>
+            </header>
+
+            <div class="blog-content">
+                <section class="blog-section">
+                    <h2>Abstract</h2>
+                    <p>
+                        A full-stack stock trading application that simulates a real brokerage experience with user authentication, real-time stock data integration, transaction management, and portfolio analytics. The platform demonstrates secure handling of financial transactions and efficient database operations.
+                    </p>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Features</h2>
+                    <ul class="features-list">
+                        <li>User authentication with securely hashed passwords</li>
+                        <li>Real-time stock data integration via API</li>
+                        <li>Trading functionality with transaction history</li>
+                        <li>Portfolio tracking and performance analytics</li>
+                        <li>Responsive UI built with Bootstrap</li>
+                        <li>SQLite database for data persistence</li>
+                    </ul>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Tech Stack</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Bootstrap</span>
+                    </div>
+                </section>
+
+                <section class="blog-section blog-body">
+                    <h2>The Challenge</h2>
+                    <p>
+                        Integrating real-time stock API data while maintaining server performance required implementing intelligent caching strategies. Handling financial transactions safely meant carefully designing the database schema and implementing proper transaction semantics.
+                    </p>
+
+                    <h3>Building the Trading Engine</h3>
+                    <p>
+                        The backend uses Flask to serve both the API endpoints and static HTML pages. Stock price data is fetched from external APIs with caching to reduce API calls and improve responsiveness. The frontend uses JavaScript to make asynchronous requests, enabling real-time updates without page refreshes.
+                    </p>
+                    <p>
+                        The database schema carefully tracks user accounts, stock transactions, and portfolio holdings. Query optimization ensures portfolio calculations remain fast even with thousands of transactions. Bootstrap provides a responsive design that works seamlessly on desktop and mobile devices.
+                    </p>
+
+                    <h3>Impact</h3>
+                    <p>
+                        This application demonstrates end-to-end full-stack development capabilities with focus on financial application requirements—data accuracy, transaction safety, and user authentication. The project highlights how backend optimization and frontend responsiveness together create a professional trading experience.
+                    </p>
+                </section>
+            </div>
+
+            <footer class="blog-footer">
+                <div class="blog-links">
+                    <a href="https://github.com/jqlgit" target="_blank" rel="noopener noreferrer" class="blog-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="../portfolio.html" class="blog-link">Back to Portfolio</a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Justin Li. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/shared.js"></script>
+</body>
+</html>

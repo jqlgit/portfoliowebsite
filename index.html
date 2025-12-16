@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Li - Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/afe17cc76e.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section / Header -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Justin Li</span></h1>
+            <p class="typing">I'm a <span class="auto-type">Programmer</span></p>
+            <p class="subtitle">Building scalable solutions and innovative software</p>
+            <div class="hero-buttons">
+                <a href="portfolio.html" class="btn btn-primary">View My Work</a>
+                <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Projects Carousel -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="carousel-container">
+                <div class="carousel-content">
+                    <div class="carousel-image-wrapper">
+                        <svg class="carousel-placeholder" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="placeholderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stopColor="#4B9CD3" />
+                                    <stop offset="100%" stopColor="#CC3168" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="300" fill="url(#placeholderGradient)" />
+                            <text x="200" y="150" textAnchor="middle" dy="0.3em" fill="white" fontSize="24" fontWeight="bold" id="carouselTitle">
+                                Arbor
+                            </text>
+                        </svg>
+                    </div>
+
+                    <div class="carousel-info">
+                        <h3 id="carouselProjectTitle">Arbor</h3>
+                        <p id="carouselProjectDesc">Product Deployment Automation Framework using Helix, Ansible, and Kafka</p>
+                        <a href="portfolio.html" class="carousel-link">View Project</a>
+                    </div>
+                </div>
+
+                <div class="carousel-controls">
+                    <button class="carousel-arrow left-arrow" onclick="previousProject()">←</button>
+                    <button class="carousel-arrow right-arrow" onclick="nextProject()">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/user.png" alt="Justin Li" class="profile-pic">
+                </div>
+
+                <div class="about-text">
+                    <p class="bio">I’m a developer with experience building scalable web, mobile, and automation systems across fintech, SaaS, and nonprofit environments. I work across the full stack using modern frameworks and cloud infrastructure, lead cross-functional efforts, and focus on turning complex problems into reliable, user-centered solutions.</p>
+                    <p class="bio"> You deserve the best. I'm here to provide just that.</p>
+                    
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="openTab(event, 'experience')">Experience</button>
+                        <button class="tab-btn" onclick="openTab(event, 'skills')">Skills</button>
+                        <button class="tab-btn" onclick="openTab(event, 'proficiencies')">Proficiencies</button>
+                        <button class="tab-btn" onclick="openTab(event, 'education')">Education</button>
+                    </div>
+
+                    <div id="experience" class="tab-content active">
+                        <h4>Professional Experience</h4>
+                        <ul>
+                            <li><strong>Software Engineer (Compute Automation)</strong> -  Wells Fargo</li>
+                            <li><strong>Software Engineer (Full-stack Web)</strong> - Ideas United</li>
+                            <li><strong>iOS Developer</strong> - App Team Carolina</li>
+                            <li><strong>Web Developer</strong> - Board of Regents of the University System of Georgia</li>
+                        </ul>
+                    </div>
+
+                    <div id="skills" class="tab-content">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>Python, Java, React.js, Vue.js, Nuxt.js, Ruby on Rails, Swift, C++, C#, C, R, JavaScript</li>
+                        </ul>
+                        <h4>Databases</h4>
+                        <ul>
+                            <li>MySQL, PostgreSQL, MongoDB, Firebase</li>
+                        </ul>
+                        <h4>Technologies & Tools</h4>
+                        <ul>
+                            <li>Pandas, Angular, Bootstrap, Spring Boot, Terraform, Microsoft Azure, AWS, Ajax, Flask, JavaFX, Linux, RESTful APIs, Excel</li>
+                        </ul>
+                    </div>
+
+                    <div id="proficiencies" class="tab-content">
+                        <h4>Key Competencies</h4>
+                        <div class="proficiency-grid">
+                            <div class="proficiency-item">
+                                <strong>Software Development</strong>
+                                <p>Full-stack web & mobile applications, architecture & design patterns</p>
+                            </div>
+                            <div class="proficiency-item">
+                                <strong>Mobile Development</strong>
+                                <p>iOS development with Swift, cross-platform solutions</p>
+                            </div>
+                            <div class="proficiency-item">
+                                <strong>Data Science</strong>
+                                <p>Data analysis, machine learning, statistical modeling</p>
+                            </div>
+                            <div class="proficiency-item">
+                                <strong>Machine Learning</strong>
+                                <p>Model training, prediction, data-driven solutions</p>
+                            </div>
+                            <div class="proficiency-item">
+                                <strong>Cybersecurity</strong>
+                                <p>Security best practices, encryption, threat mitigation</p>
+                            </div>
+                            <div class="proficiency-item">
+                                <strong>DevOps</strong>
+                                <p>Cloud infrastructure, CI/CD pipelines, containerization</p>
+                            </div>
+                            <div class="proficiency-item">
+                                <strong>UI/UX Design</strong>
+                                <p>Responsive design, user-centered development, accessibility</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="education" class="tab-content">
+                        <h4>Education</h4>
+                        <ul>
+                            <li><strong>University of North Carolina At Chapel Hill</strong> - Bachelors of Science in Computer Science</li>
+                            <li><strong>National University of Singapore</strong> - Computer Science</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Development</h3>
+                    <p>Full-stack development of web and mobile applications using modern frameworks and best practices.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & DevOps Engineering</h3>
+                    <p>Design and implement scalable cloud infrastructure with automated deployment pipelines.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data & Automation Solutions</h3>
+                    <p>Build ETL pipelines and automation systems to streamline business processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Justin Li. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="js/shared.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
