@@ -29,7 +29,7 @@ function updateCarousel() {
     
     // Update image based on project ID
     if (carouselImage) {
-        let imageSrc = 'images/default-project.jpg'; // fallback
+        let imageSrc = 'images/background.png'; // fallback to background
         if (project.id === 'point-cloud-codec') {
             imageSrc = 'images/point-cloud-compression-research.jpg';
         } else if (project.id === 'gdp-forecasting') {
