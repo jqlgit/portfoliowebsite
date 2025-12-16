@@ -19,13 +19,25 @@ function updateCarousel() {
     if (projectsData.length === 0) return;
     
     const project = projectsData[currentProjectIndex];
-    const carouselTitle = document.getElementById('carouselTitle');
+    const carouselImage = document.getElementById('carouselImage');
     const carouselProjectTitle = document.getElementById('carouselProjectTitle');
     const carouselProjectDesc = document.getElementById('carouselProjectDesc');
     
-    if (carouselTitle) carouselTitle.textContent = project.title;
+    // Update project info
     if (carouselProjectTitle) carouselProjectTitle.textContent = project.title;
     if (carouselProjectDesc) carouselProjectDesc.textContent = project.description;
+    
+    // Update image based on project ID
+    if (carouselImage) {
+        let imageSrc = 'images/default-project.jpg'; // fallback
+        if (project.id === 'point-cloud-codec') {
+            imageSrc = 'images/point-cloud-compression-research.jpg';
+        } else if (project.id === 'gdp-forecasting') {
+            imageSrc = 'images/gdp-forecasting-research.jpg';
+        }
+        carouselImage.src = imageSrc;
+        carouselImage.alt = project.title;
+    }
 }
 
 // Next project
