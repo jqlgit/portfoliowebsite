@@ -146,19 +146,19 @@
         "id": "point-cloud-codec",
         "title": "Point Cloud Codec Comparison",
         "category": "Research Project",
-        "description": "Comparative analysis of point cloud compression codecs including G-PCC and VTM-PCC",
+        "description": "Comprehensive comparative evaluation of point cloud compression codecs: Draco, MPEG G-PCC, MPEG V-PCC, and PCL",
         "url": "projects/point-cloud-codec.html",
-        "fullDescription": "A comprehensive research and analysis project comparing various point cloud compression codecs and their effectiveness across different data sets.",
+        "fullDescription": "A rigorous research study comparing four major open-source point cloud compression codecs across 1,211 PLY files, evaluating compression efficiency, speed, and reconstruction quality across diverse real-world datasets including people, objects, and large-scale environments.",
         "features": [
-            "Analysis of G-PCC (Geometry-based Point Cloud Compression)",
-            "VTM-PCC (Video-based Point Cloud Compression) evaluation",
-            "Compression ratio benchmarking across multiple datasets",
-            "Quality assessment metrics and PSNR/rate analysis",
-            "Performance comparison with visual quality preservation",
-            "Detailed codec architecture analysis",
-            "Real-world application recommendations"
+            "Evaluation of 4 major codecs: Draco, MPEG G-PCC, MPEG V-PCC, and Point Cloud Library (PCL)",
+            "Analysis of 1,211 PLY files across 7 dataset categories",
+            "Compression efficiency measurement via compression ratio and bits-per-point",
+            "Speed benchmarking: encoding/decoding times from milliseconds to hours",
+            "Reconstruction quality assessment using Peak Signal-to-Noise Ratio (PSNR)",
+            "Trade-off analysis between compression, speed, and quality",
+            "Practical recommendations for codec selection by application priority"
         ],
-        "techStack": ["Python", "Data Analysis", "Research", "Compression Algorithms", "3D Visualization"],
-        "challenge": "Evaluating multiple codec implementations with varying architectures required developing a comprehensive testing framework and understanding complex compression algorithms at a deep level."
+        "techStack": ["Python", "3D Point Cloud Processing", "Data Analysis", "Benchmark Testing", "CMake", "Git", "macOS"],
+        "challenge": "Implementing and benchmarking four different codec implementations with vastly different architectures and performance profiles across 1,200+ diverse point cloud files required building a comprehensive testing framework and analyzing complex trade-offs between compression efficiency, computational speed, and reconstruction fidelity."
     }
 ]

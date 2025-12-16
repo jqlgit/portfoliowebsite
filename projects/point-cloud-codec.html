@@ -33,154 +33,116 @@
                 <p class="blog-meta">Research Project</p>
             </header>
 
-            <div class="blog-image">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" fill="none">
-                    <!-- Title -->
-                    <text x="150" y="12" font-size="11" font-weight="bold" text-anchor="middle" fill="currentColor">Performance Comparison</text>
-                    
-                    <!-- Chart 1: Speed Bars -->
-                    <g>
-                        <text x="50" y="28" font-size="8" fill="currentColor" opacity="0.7">Speed</text>
-                        <line x1="30" y1="35" x2="70" y2="35" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-                        <!-- PCL (blue) -->
-                        <rect x="32" y="50" width="3" height="10" fill="#4B9CD3" opacity="0.8"/>
-                        <!-- Draco (red) -->
-                        <rect x="38" y="45" width="3" height="15" fill="#CC3168" opacity="0.8"/>
-                        <!-- MPEG-GPCC (yellow) -->
-                        <rect x="44" y="48" width="3" height="12" fill="#FFB84D" opacity="0.8"/>
-                        <!-- MPEG-VPCC (green) -->
-                        <rect x="50" y="30" width="3" height="30" fill="#2ECC71" opacity="0.8"/>
-                    </g>
-                    
-                    <!-- Chart 2: Compression Ratio (logarithmic) -->
-                    <g>
-                        <text x="150" y="28" font-size="8" fill="currentColor" opacity="0.7">Compression</text>
-                        <line x1="130" y1="35" x2="170" y2="35" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-                        <!-- PCL (blue) -->
-                        <rect x="132" y="55" width="3" height="5" fill="#4B9CD3" opacity="0.8"/>
-                        <!-- Draco (red) -->
-                        <rect x="138" y="52" width="3" height="8" fill="#CC3168" opacity="0.8"/>
-                        <!-- MPEG-GPCC (yellow) -->
-                        <rect x="144" y="50" width="3" height="10" fill="#FFB84D" opacity="0.8"/>
-                        <!-- MPEG-VPCC (green) -->
-                        <rect x="150" y="32" width="3" height="28" fill="#2ECC71" opacity="0.8"/>
-                    </g>
-                    
-                    <!-- Chart 3: PSNR Quality -->
-                    <g>
-                        <text x="250" y="28" font-size="8" fill="currentColor" opacity="0.7">PSNR</text>
-                        <line x1="230" y1="35" x2="270" y2="35" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
-                        <!-- Quality line -->
-                        <polyline points="232,48 238,45 244,46 250,42 256,48 262,40 268,50" 
-                                  stroke="currentColor" stroke-width="1.5" opacity="0.6" fill="none"/>
-                        <!-- Key point highlight -->
-                        <circle cx="256" cy="48" r="2" fill="#4B9CD3" opacity="0.9"/>
-                    </g>
-                    
-                    <!-- Legend -->
-                    <g font-size="7" opacity="0.6">
-                        <rect x="30" y="75" width="2" height="2" fill="#4B9CD3"/>
-                        <text x="35" y="77">PCL</text>
-                        
-                        <rect x="65" y="75" width="2" height="2" fill="#CC3168"/>
-                        <text x="70" y="77">Draco</text>
-                        
-                        <rect x="105" y="75" width="2" height="2" fill="#FFB84D"/>
-                        <text x="110" y="77">G-PCC</text>
-                        
-                        <rect x="155" y="75" width="2" height="2" fill="#2ECC71"/>
-                        <text x="160" y="77">V-PCC</text>
-                    </g>
-                    
-                    <!-- Research indicator -->
-                    <text x="150" y="105" font-size="7" text-anchor="middle" fill="currentColor" opacity="0.5">
-                        Codec Performance Analysis
-                    </text>
-                </svg>
+            <div class="blog-image" style="background: transparent; display: flex; align-items: center; justify-content: center;">
+                <img src="../images/point-cloud-compression-research.jpg" alt="Point Cloud Codec Comparison Research Results" style="width: 100%; height: auto; border-radius: 8px; max-height: 500px; object-fit: contain;">
             </div>
 
             <div class="blog-content">
                 <section class="blog-section">
                     <h2>Abstract</h2>
                     <p>
-                        This research project presents a comprehensive comparative analysis of modern point cloud compression codecs, with particular focus on Geometry-based Point Cloud Compression (G-PCC) and Video-based Point Cloud Compression (VTM-PCC) standards. The study evaluates compression efficiency, visual quality preservation, and computational performance across diverse real-world datasets, providing insights into optimal codec selection for different applications.
+                        3D point clouds represent objects or locations and are increasingly popular because of their ability to recreate reality through spatial coordinates. Efficient compression is critical for reducing file sizes, improving streaming speeds, and enabling high-resolution point clouds in bandwidth-constrained environments. This paper provides a comprehensive comparative evaluation of four major open-source point cloud compression codecs—Draco, MPEG G-PCC, MPEG V-PCC, and Point Cloud Library (PCL)—across 1,211 PLY format files. The study measures compression efficiency, computational speed, and reconstruction quality to determine the best codec for different application priorities.
                     </p>
                 </section>
 
                 <section class="blog-section">
-                    <h2>Features</h2>
+                    <h2>Key Findings</h2>
                     <ul class="features-list">
-                        <li>Analysis of G-PCC (Geometry-based Point Cloud Compression)</li>
-                        <li>VTM-PCC (Video-based Point Cloud Compression) evaluation</li>
-                        <li>Compression ratio benchmarking across multiple datasets</li>
-                        <li>Quality assessment metrics and PSNR/rate analysis</li>
-                        <li>Performance comparison with visual quality preservation</li>
-                        <li>Detailed codec architecture analysis</li>
-                        <li>Real-world application recommendations</li>
+                        <li><strong>MPEG V-PCC:</strong> Achieves highest compression (1,000-7,000x) and excellent lossy quality, but with extremely long runtimes (hours per file)</li>
+                        <li><strong>MPEG G-PCC:</strong> Offers strong lossless compression (~90x) with high-quality reconstruction at moderate speeds (500-700ms)</li>
+                        <li><strong>Draco:</strong> Provides fast encoding (300-450ms) with moderate compression (6-48x) and quality, ideal for lightweight applications</li>
+                        <li><strong>PCL:</strong> Fastest codec (~100-200ms) but weakest compression and lowest reconstruction fidelity across most datasets</li>
+                        <li>No single codec dominates all three metrics; selection depends on application priorities</li>
                     </ul>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Datasets & Methodology</h2>
+                    <p>
+                        The evaluation analyzed <strong>1,211 PLY files</strong> organized into 7 categories with varying characteristics:
+                    </p>
+                    <ul style="margin: 15px 0;">
+                        <li><strong>PLY1-5:</strong> 318-245 files; 222,000-361,000 points per file; 4.4-7.3 MB average</li>
+                        <li><strong>PLY6:</strong> 5 high-resolution files; 1.2M points/file; 47 MB average</li>
+                        <li><strong>PLY7:</strong> 4 ultra-high-resolution files; 2M points/file; 342 MB average</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        Data sources included Paris-Lille-3D urban scenes, Microsoft Plenoptic point clouds, Artec3D high-resolution scans, Stanford 3D Scanning Repository, Princeton ModelNet, MPEG PCC Content Database, and 8i Voxelized Full Bodies datasets—covering people, objects, and large-scale environments.
+                    </p>
                 </section>
 
                 <section class="blog-section">
                     <h2>Tech Stack</h2>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Data Analysis</span>
-                        <span class="tech-tag">Research</span>
-                        <span class="tech-tag">Compression Algorithms</span>
-                        <span class="tech-tag">3D Visualization</span>
+                        <span class="tech-tag">CMake</span>
+                        <span class="tech-tag">Git</span>
+                        <span class="tech-tag">macOS</span>
+                        <span class="tech-tag">3D Point Cloud Processing</span>
+                        <span class="tech-tag">Benchmark Testing</span>
                     </div>
                 </section>
 
                 <section class="blog-section blog-body">
                     <h2>The Challenge</h2>
                     <p>
-                        Point cloud data represents a revolutionary way to capture 3D environments, with applications ranging from autonomous vehicles to digital heritage preservation. However, the massive volume of geometric and color information generated by modern 3D scanners presents significant compression challenges. This project required developing a comprehensive framework to evaluate different compression approaches while understanding their architectural fundamentals.
+                        Point cloud compression presents a fundamental challenge: dense 3D point clouds contain massive amounts of spatial and attribute data (including color coordinates), making compression computationally intensive while maintaining geometric fidelity. The irregular structure of real-world point clouds makes traditional compression techniques ineffective. This study required implementing and benchmarking four codecs with entirely different architectural approaches—from simple voxel-based structures to hierarchical geometry-based encoding to video-based projection pipelines.
                     </p>
 
-                    <h3>Codec Architecture Analysis</h3>
+                    <h3>Codec Architectures</h3>
                     <p>
-                        <strong>G-PCC (Geometry-based Compression)</strong> focuses on the spatial distribution of points, employing octree-based hierarchical decomposition to identify and exploit geometric redundancy. This approach is particularly effective for sparse point clouds with irregular distributions, as it adaptively refines spatial resolution where point density is high.
+                        <strong>Draco (Google, 2017)</strong> uses predictive geometry techniques to compress 3D meshes and point clouds, reducing file sizes by 90% or more through efficient encoding of vertex positions, normals, colors, and texture coordinates. It prioritizes transmission speed and storage efficiency at the cost of lossy compression.
                     </p>
                     <p>
-                        <strong>VTM-PCC (Video-based Compression)</strong> transforms the 3D point cloud problem into a 2D video compression problem by projecting points onto multiple 2D planes and encoding them as video sequences. By leveraging mature video codec technologies (like HEVC), VTM-PCC achieves high compression ratios at the cost of requiring careful projection and attribute mapping.
+                        <strong>MPEG G-PCC (Geometry-based)</strong> organizes geometry into hierarchical spatial structures (like octrees) to represent different levels of detail. This approach preserves fine structure with high accuracy but processes geometry in detail-intensive ways, resulting in slower encoding speeds.
+                    </p>
+                    <p>
+                        <strong>MPEG V-PCC (Video-based)</strong> projects 3D point clouds onto 2D layouts compressed using standard video codecs (HEVC). This approach leverages mature video compression technology to achieve exceptionally high compression ratios (1,000-7,000x) but requires computationally intensive projection and video encoding pipelines, often taking multiple hours per file.
+                    </p>
+                    <p>
+                        <strong>Point Cloud Library (PCL)</strong> employs octree-based compression with quantized voxel space and occupancy information. It's designed for robotics and real-time applications, prioritizing fast integration and decoding over maximum compression efficiency.
                     </p>
 
-                    <h3>Evaluation Methodology</h3>
+                    <h3>Evaluation Metrics & Results</h3>
                     <p>
-                        The comparative analysis involved constructing test suites with diverse point cloud characteristics:
+                        Three standardized metrics measured codec performance:
                     </p>
                     <ul>
-                        <li><strong>Dense Indoor Scans:</strong> High-resolution LiDAR captures with uniform point distribution</li>
-                        <li><strong>Sparse Outdoor Data:</strong> Aerial and autonomous vehicle sensor data with irregular patterns</li>
-                        <li><strong>Man-made Objects:</strong> CAD-like structured point clouds with repetitive geometry</li>
-                        <li><strong>Organic Structures:</strong> Natural scenes with complex, irregular point distributions</li>
+                        <li><strong>Compression Efficiency:</strong> Measured via compression ratio and bits-per-point (bpp)</li>
+                        <li><strong>Speed:</strong> Total encoding and decoding time; PCL: ~100-200ms, Draco: ~300-450ms, G-PCC: ~500-700ms, V-PCC: 6,467-24,000,000ms</li>
+                        <li><strong>Reconstruction Quality:</strong> Peak Signal-to-Noise Ratio (PSNR); higher values indicate more accurate reconstruction</li>
                     </ul>
 
-                    <h3>Key Findings</h3>
+                    <h3>Key Performance Trade-offs</h3>
                     <p>
-                        The analysis revealed distinct trade-offs between the two codec families:
+                        <strong>Speed vs. Compression:</strong> PCL and Draco complete encoding in sub-second timeframes but achieve weak compression ratios (1-48x). V-PCC achieves 1,000-7,000x compression at the cost of multi-hour processing times. G-PCC balances both, achieving 90x lossless compression with moderate 500-700ms speeds.
+                    </p>
+                    <p>
+                        <strong>Quality vs. Efficiency:</strong> G-PCC produced the highest PSNR for PLY folders 1-5 (complex geometry), while PCL showed superior quality on PLY6-7 (extremely dense point clouds where voxel representation aligns well). Draco consistently produced low PSNR scores, indicating noticeable information loss.
+                    </p>
+                    <p>
+                        <strong>Geometry Complexity Sensitivity:</strong> G-PCC showed strong performance on geometrically complex datasets but quality dropped sharply for ultra-dense irregular geometry (PLY6-7). V-PCC, leveraging video compression, handled dense structured point clouds exceptionally well.
+                    </p>
+
+                    <h3>Application-Specific Recommendations</h3>
+                    <ul>
+                        <li><strong>Real-time Robotics & SLAM:</strong> Use PCL for sub-200ms responsiveness in embedded systems</li>
+                        <li><strong>Web Visualization & Mobile Delivery:</strong> Use Draco for sub-second processing and moderate compression</li>
+                        <li><strong>Balanced Quality & Speed:</strong> Use G-PCC for lossless 90x compression with manageable encoding times</li>
+                        <li><strong>Maximum Compression (Offline):</strong> Use V-PCC for 1,000-7,000x compression when processing time is not a constraint</li>
+                        <li><strong>Large-scale Archives:</strong> V-PCC and G-PCC offer best storage optimization; G-PCC if re-encoding is frequent</li>
+                    </ul>
+
+                    <h3>Conclusion</h3>
+                    <p>
+                        No single codec dominates across all three performance dimensions. Each reflects a distinct design philosophy:
                     </p>
                     <ul>
-                        <li><strong>Compression Efficiency:</strong> VTM-PCC achieved superior compression ratios (up to 100:1) on dense, regularly distributed point clouds, while G-PCC performed better on sparse, irregular data</li>
-                        <li><strong>Visual Quality:</strong> G-PCC preserves geometric accuracy better, essential for precision applications; VTM-PCC introduces slight distortions due to projection and reprojection</li>
-                        <li><strong>Computational Cost:</strong> G-PCC requires less computational overhead for encoding/decoding; VTM-PCC leverages existing video codec optimizations but demands more preprocessing</li>
-                        <li><strong>Attribute Handling:</strong> Both codecs handle color and intensity attributes, but with different efficiency trade-offs</li>
+                        <li><strong>PCL & Draco:</strong> Preferred when speed and simplicity are priorities</li>
+                        <li><strong>G-PCC & V-PCC:</strong> Preferred when quality and compression efficiency matter most</li>
                     </ul>
-
-                    <h3>Real-World Applications</h3>
-                    <p>
-                        The findings led to practical recommendations for different application domains:
-                    </p>
-                    <ul>
-                        <li><strong>Autonomous Vehicles:</strong> G-PCC preferred due to superior geometry preservation and lower latency requirements</li>
-                        <li><strong>Digital Archives:</strong> VTM-PCC suitable for high compression ratios in storage-constrained scenarios</li>
-                        <li><strong>Telepresence:</strong> G-PCC for real-time applications requiring low computational overhead</li>
-                        <li><strong>3D Reconstruction:</strong> Codec selection depends on input density and desired reconstruction fidelity</li>
-                    </ul>
-
-                    <h3>Future Directions</h3>
-                    <p>
-                        The research identified emerging trends in point cloud compression: adaptive codec selection based on point cloud characteristics, learned compression techniques using neural networks, and hybrid approaches combining strengths of both geometry and video-based methods. The standardization of next-generation codecs continues to evolve, with potential for neural network-based approaches to significantly improve compression-quality trade-offs.
+                    <p style="margin-top: 15px;">
+                        Effective codec selection requires understanding your specific application requirements and prioritizing which metrics matter most—compression efficiency, computational speed, or reconstruction fidelity. This research provides a data-driven foundation for making informed codec decisions across diverse point cloud processing scenarios.
                     </p>
                 </section>
             </div>
