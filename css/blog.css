@@ -24,6 +24,46 @@
     padding-bottom: 30px;
 }
 
+.blog-image {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #4B9CD3 0%, #CC3168 100%);
+    border-radius: 8px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    position: relative;
+}
+
+.blog-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="1200" height="400" fill="url(%23grid)" /></svg>');
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.blog-image svg {
+    z-index: 2;
+    width: 80%;
+    height: 80%;
+    max-width: 300px;
+}
+
+.blog-header {
+    margin-bottom: 60px;
+    border-bottom: 2px solid rgba(75, 156, 211, 0.2);
+    padding-bottom: 30px;
+}
+
 .blog-header h1 {
     font-size: 48px;
     color: var(--primary-color);
@@ -197,6 +237,11 @@
 
     .blog-body {
         padding: 20px;
+    }
+
+    .blog-image {
+        height: 250px;
+        margin-bottom: 30px;
     }
 
     .blog-links {
