@@ -1,5 +1,43 @@
 [
     {
+        "id": "gdp-forecasting",
+        "title": "GDP Forecasting Using Machine Learning",
+        "category": "Research Project",
+        "description": "Machine learning analysis of environmental and clinical risk factors influencing national GDP across 1,981 country-year observations",
+        "url": "projects/gdp-forecasting.html",
+        "fullDescription": "A comprehensive research study examining the relationship between environmental risk factors, clinical health statistics, and national economic performance. Using a consolidated dataset of environmental, clinical, demographic, and economic indicators, we applied supervised learning techniques including linear regression, logistic regression, and ridge regression with Anthropic API integration for LLM-assisted interpretation of model results.",
+        "features": [
+            "Integration of 3 major data sources: WHO risk factors, population statistics, and GDP data",
+            "Analysis of 1,981 country-year observations across 35 variables (1990-2009)",
+            "Linear regression with SGD achieving R² = 0.47 on GDP prediction task",
+            "Logistic regression classification with 85% accuracy for high/low GDP prediction",
+            "Feature importance analysis identifying influential environmental and clinical variables",
+            "Multi-domain analysis showing environmental and clinical features complement each other",
+            "LLM-assisted interpretation via Anthropic Claude API for structured explanations of patterns"
+        ],
+        "techStack": ["Python", "Scikit-learn", "Machine Learning", "Data Analysis", "Anthropic API", "LLM Integration", "Jupyter Notebooks"],
+        "challenge": "Merging heterogeneous datasets with inconsistent country naming conventions, missing values, and variable data quality across diverse global contexts required extensive preprocessing and careful model selection to handle the complexities of cross-country economic analysis."
+    },
+    {
+        "id": "point-cloud-codec",
+        "title": "Point Cloud Codec Comparison",
+        "category": "Research Project",
+        "description": "Comprehensive comparative evaluation of point cloud compression codecs: Draco, MPEG G-PCC, MPEG V-PCC, and PCL",
+        "url": "projects/point-cloud-codec.html",
+        "fullDescription": "A rigorous research study comparing four major open-source point cloud compression codecs across 1,211 PLY files, evaluating compression efficiency, speed, and reconstruction quality across diverse real-world datasets including people, objects, and large-scale environments.",
+        "features": [
+            "Evaluation of 4 major codecs: Draco, MPEG G-PCC, MPEG V-PCC, and Point Cloud Library (PCL)",
+            "Analysis of 1,211 PLY files across 7 dataset categories",
+            "Compression efficiency measurement via compression ratio and bits-per-point",
+            "Speed benchmarking: encoding/decoding times from milliseconds to hours",
+            "Reconstruction quality assessment using Peak Signal-to-Noise Ratio (PSNR)",
+            "Trade-off analysis between compression, speed, and quality",
+            "Practical recommendations for codec selection by application priority"
+        ],
+        "techStack": ["Python", "3D Point Cloud Processing", "Data Analysis", "Benchmark Testing", "CMake", "Git", "macOS"],
+        "challenge": "Implementing and benchmarking four different codec implementations with vastly different architectures and performance profiles across 1,200+ diverse point cloud files required building a comprehensive testing framework and analyzing complex trade-offs between compression efficiency, computational speed, and reconstruction fidelity."
+    },
+    {
         "id": "arbor",
         "title": "Arbor",
         "category": "Enterprise Automation",
@@ -141,24 +179,5 @@
         ],
         "techStack": ["React.js", "CSS", "JavaScript"],
         "challenge": "Managing complex state across the shopping cart and maintaining performance with a large product database required careful component structure."
-    },
-    {
-        "id": "point-cloud-codec",
-        "title": "Point Cloud Codec Comparison",
-        "category": "Research Project",
-        "description": "Comprehensive comparative evaluation of point cloud compression codecs: Draco, MPEG G-PCC, MPEG V-PCC, and PCL",
-        "url": "projects/point-cloud-codec.html",
-        "fullDescription": "A rigorous research study comparing four major open-source point cloud compression codecs across 1,211 PLY files, evaluating compression efficiency, speed, and reconstruction quality across diverse real-world datasets including people, objects, and large-scale environments.",
-        "features": [
-            "Evaluation of 4 major codecs: Draco, MPEG G-PCC, MPEG V-PCC, and Point Cloud Library (PCL)",
-            "Analysis of 1,211 PLY files across 7 dataset categories",
-            "Compression efficiency measurement via compression ratio and bits-per-point",
-            "Speed benchmarking: encoding/decoding times from milliseconds to hours",
-            "Reconstruction quality assessment using Peak Signal-to-Noise Ratio (PSNR)",
-            "Trade-off analysis between compression, speed, and quality",
-            "Practical recommendations for codec selection by application priority"
-        ],
-        "techStack": ["Python", "3D Point Cloud Processing", "Data Analysis", "Benchmark Testing", "CMake", "Git", "macOS"],
-        "challenge": "Implementing and benchmarking four different codec implementations with vastly different architectures and performance profiles across 1,200+ diverse point cloud files required building a comprehensive testing framework and analyzing complex trade-offs between compression efficiency, computational speed, and reconstruction fidelity."
     }
 ]

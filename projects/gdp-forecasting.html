@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDP Forecasting Using Machine Learning - Justin Li</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/afe17cc76e.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container">
+            <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+            
+            <header class="blog-header">
+                <h1>GDP Forecasting Using Machine Learning</h1>
+                <p class="blog-tagline">Predicting national economic performance from environmental and clinical indicators</p>
+                <p class="blog-meta">Research Project</p>
+            </header>
+
+            <div class="blog-content">
+                <section class="blog-section">
+                    <h2>Abstract</h2>
+                    <p>
+                        This research examines the relationship between national environmental risk factors, clinical health statistics, and economic performance measured through country-level GDP. Using a consolidated dataset containing environmental, clinical, demographic, and economic indicators, we analyze which variables most strongly correlate with economic outcomes. Our methodology explores supervised learning techniques including linear regression, logistic regression, ridge regression, and stochastic gradient descent based models, along with hyperparameter tuning procedures. After generating model outputs and examining feature influence, we route results to the Anthropic API to produce structured, high-level interpretations of observed patterns and correlations. This combination of statistical modeling and large language model assisted analysis provides a flexible framework for understanding how health and environmental vulnerabilities may be associated with macroeconomic stability.
+                    </p>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Key Findings</h2>
+                    <ul class="features-list">
+                        <li><strong>Linear Regression Best Performance:</strong> Achieved MSE of 2.14 × 10²³ with R² score of 0.47, indicating moderate predictive accuracy</li>
+                        <li><strong>Classification Excellence:</strong> Logistic regression with liblinear solver achieved 85% accuracy and F1 score of 0.86 in high/low GDP prediction</li>
+                        <li><strong>Multi-Domain Advantage:</strong> Combined environmental and clinical features outperformed either domain alone, confirming both contribute meaningful information</li>
+                        <li><strong>Prediction Stability:</strong> Models showed stronger accuracy for higher GDP countries, weaker for very low GDP nations</li>
+                        <li><strong>LLM-Assisted Interpretation:</strong> Anthropic API generated structured explanations of feature influence and economic risk profiles</li>
+                        <li>Dataset: 1,981 country-year observations across 35 variables from 1990-2009</li>
+                    </ul>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Datasets & Methodology</h2>
+                    <p>
+                        The analysis integrated <strong>3 major data sources</strong> covering environmental, clinical, demographic, and economic indicators:
+                    </p>
+                    <ul style="margin: 15px 0;">
+                        <li><strong>WHO Risk Factor Data (Kaggle):</strong> Deaths by risk factors for each country, 1990-2017 (selected 15 of 31 variables most relevant to analysis)</li>
+                        <li><strong>Population Statistics:</strong> Annual population data from HYDE, Gapminder, and UN World Population Prospects (1990-2009)</li>
+                        <li><strong>GDP Data (WITS):</strong> Country GDP in US dollars from World Integrated Trade Solutions, spanning 1988-2022 (analyzed 1990-2009)</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        <strong>Data Preparation:</strong> Standardized country names across datasets, merged 3 sources into unified 35-variable dataset, filtered out territories and small populations, resulting in final dataset of 1,981 country-year observations. Countries studied included both high-income and low-income nations across all global regions.
+                    </p>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Tech Stack</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Anthropic API</span>
+                        <span class="tech-tag">LLM Integration</span>
+                        <span class="tech-tag">Jupyter Notebooks</span>
+                    </div>
+                </section>
+
+                <section class="blog-section blog-body">
+                    <h2>The Challenge</h2>
+                    <p>
+                        Understanding what drives national economic performance is a central question in global development and public policy. Traditional economic models focus on capital, labor, and institutions, but this research hypothesizes that environmental risk factors and population-level clinical health statistics also shape long-term outcomes. The challenge lies in integrating heterogeneous data sources with different country names, time periods, and data quality issues, then identifying meaningful statistical relationships across diverse global contexts.
+                    </p>
+
+                    <h3>Data Integration & Preprocessing</h3>
+                    <p>
+                        Merging three independent data sources proved challenging due to inconsistent country naming conventions. For example, some datasets used "United States" while others used "USA" or "US". Our approach involved standardizing all country names across datasets to enable proper merging. Additionally, many countries had incomplete data, missing values (NaN) were prevalent, and population sizes varied dramatically. We addressed this by excluding territories and very small populations that had incomplete or unrepresentative data. The final preprocessing reduced rows from initial observations to 1,981 verified country-year combinations with complete information across all 35 variables.
+                    </p>
+
+                    <h3>Machine Learning Models</h3>
+                    <p>
+                        <strong>Linear Regression with SGD:</strong> Assumes linear relationships between predictors and GDP. Stochastic gradient descent optimization was chosen because it performs well on larger datasets and allows quicker progress early in training. This model produced our best results with R² of 0.47.
+                    </p>
+                    <p>
+                        <strong>Ridge Regression:</strong> Incorporates L2 regularization to stabilize coefficient estimates, preventing overly large values that can result from multicollinearity in economic data. Ridge regression achieved R² of 0.37, demonstrating the benefit of regularization for this complex dataset.
+                    </p>
+                    <p>
+                        <strong>Logistic Regression (Binary Classification):</strong> We reframed the problem as binary classification: predicting whether a country falls into high or low GDP groups. Both liblinear and gradient descent solvers were implemented. The liblinear variant achieved superior performance (85% accuracy, F1=0.86) compared to gradient descent (84% accuracy, F1=0.82).
+                    </p>
+                    <p>
+                        <strong>SGD Linear Model:</strong> Initially produced unstable, unrealistic predictions with unusually large values. This was traced to insufficient iteration count during optimization. Increasing iterations and adjusting learning rates stabilized results and produced interpretable outputs.
+                    </p>
+
+                    <h3>Evaluation Metrics & Results</h3>
+                    <p>
+                        <strong>Regression Performance:</strong>
+                    </p>
+                    <ul>
+                        <li>Linear Regression: MSE = 2.14 × 10²³, R² = 0.47 (Best)</li>
+                        <li>Ridge Regression: R² = 0.37</li>
+                        <li>SGD Linear: R² = 0.24</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        <strong>Classification Performance:</strong>
+                    </p>
+                    <ul>
+                        <li>Logistic Regression (liblinear): Accuracy = 0.85, F1 = 0.86 (Best)</li>
+                        <li>Logistic Regression (gradient descent): Accuracy = 0.84, F1 = 0.82</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        These results indicate moderate predictive accuracy for regression tasks and strong classification accuracy, particularly for higher GDP countries. The asymmetric performance suggests linear relationships capture GDP variation more effectively in developed economies with stable institutional structures.
+                    </p>
+
+                    <h3>Feature Influence & LLM-Assisted Interpretation</h3>
+                    <p>
+                        We computed feature importances and coefficient magnitudes to identify which variables contributed most strongly to predictions. Model outputs and summary statistics were then routed to the Anthropic Claude API with carefully engineered prompts to generate structured, high-level explanations of patterns and correlations. The LLM assistant helped identify which environmental and clinical features appeared most influential and how they tended to differ between high and low GDP economic profiles—converting raw metrics into intuitive narratives about how health and environmental risks relate to economic performance.
+                    </p>
+
+                    <h3>Challenges & Lessons Learned</h3>
+                    <p>
+                        <strong>Data Quality Issues:</strong> Significant challenges with missing values and improperly formatted entries required extensive preprocessing before meaningful analysis. This underscored the critical importance of rigorous data validation when combining cross-country datasets from multiple sources.
+                    </p>
+                    <p>
+                        <strong>Computational Environment:</strong> The Jupyter notebook kernel frequently failed to update during iterative testing, slowing experimentation and requiring multiple restarts. This highlighted the need for structured pipelines for repeated experiments rather than relying on notebook state management.
+                    </p>
+                    <p>
+                        <strong>Hyperparameter Sensitivity:</strong> SGD models proved extremely sensitive to hyperparameter choices, producing unstable predictions when iteration counts were insufficient. Increasing iterations and carefully tuning learning rates was essential for convergence to realistic values.
+                    </p>
+
+                    <h3>Key Insights</h3>
+                    <p>
+                        <strong>Multi-Domain Synergy:</strong> Models combining environmental and clinical features consistently outperformed those using either domain alone, indicating that both health conditions and environmental vulnerabilities contain independent, complementary information about economic outcomes.
+                    </p>
+                    <p>
+                        <strong>Income Stratification:</strong> Classification accuracy was substantially stronger for higher GDP countries (85%) and weaker for very low GDP nations, suggesting that linear relationships between risk factors and GDP stability are more pronounced in developed economies with established institutions and infrastructure.
+                    </p>
+                    <p>
+                        <strong>Correlation vs. Causation:</strong> This analysis is fundamentally correlational and cannot establish causal mechanisms. Environmental and health factors show statistical associations with GDP, but establishing whether these are causal relationships would require time-series analysis or causal inference techniques.
+                    </p>
+
+                    <h3>Limitations & Future Work</h3>
+                    <p>
+                        <strong>Current Limitations:</strong>
+                    </p>
+                    <ul>
+                        <li>Analysis is correlational; cannot establish causal relationships</li>
+                        <li>Dataset lacks important economic, institutional, and political variables that may influence GDP</li>
+                        <li>Cross-sectional structure prevents examining how changes over time affect economic outcomes</li>
+                        <li>Data limited to 1990-2009 period; may not reflect current global conditions</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        <strong>Future Research Directions:</strong>
+                    </p>
+                    <ul>
+                        <li>Extend analysis with time-series data to capture dynamic relationships</li>
+                        <li>Incorporate additional socioeconomic controls (governance, infrastructure, education)</li>
+                        <li>Apply causal inference techniques (instrumental variables, difference-in-differences) to identify mechanisms</li>
+                        <li>Develop region-specific models that account for institutional and cultural contexts</li>
+                        <li>Integrate climate and environmental data for longer time horizons</li>
+                    </ul>
+
+                    <h3>Conclusion</h3>
+                    <p>
+                        This project demonstrates that environmental and clinical factors show meaningful statistical relationships with national GDP, but also highlights the importance of careful data handling, thoughtful model selection, and transparent interpretation when analyzing complex global datasets. By integrating statistical modeling with large language model assisted interpretation, we developed a framework that converts raw correlations into interpretable narratives about how health and environmental vulnerabilities may be associated with a country's long-term development trajectory and economic stability. While these results are correlational rather than causal, they support the broader idea that environmental and clinical conditions are closely intertwined with economic outcomes and merit inclusion in comprehensive macroeconomic analyses.
+                    </p>
+                </section>
+            </div>
+
+            <footer class="blog-footer">
+                <div class="blog-links">
+                    <a href="../portfolio.html" class="btn-secondary">&larr; Back to Portfolio</a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../js/shared.js"></script>
+</body>
+</html>
