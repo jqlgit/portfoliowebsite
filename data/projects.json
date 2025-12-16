@@ -141,5 +141,24 @@
         ],
         "techStack": ["React.js", "CSS", "JavaScript"],
         "challenge": "Managing complex state across the shopping cart and maintaining performance with a large product database required careful component structure."
+    },
+    {
+        "id": "point-cloud-codec",
+        "title": "Point Cloud Codec Comparison",
+        "category": "Research Project",
+        "description": "Comparative analysis of point cloud compression codecs including G-PCC and VTM-PCC",
+        "url": "projects/point-cloud-codec.html",
+        "fullDescription": "A comprehensive research and analysis project comparing various point cloud compression codecs and their effectiveness across different data sets.",
+        "features": [
+            "Analysis of G-PCC (Geometry-based Point Cloud Compression)",
+            "VTM-PCC (Video-based Point Cloud Compression) evaluation",
+            "Compression ratio benchmarking across multiple datasets",
+            "Quality assessment metrics and PSNR/rate analysis",
+            "Performance comparison with visual quality preservation",
+            "Detailed codec architecture analysis",
+            "Real-world application recommendations"
+        ],
+        "techStack": ["Python", "Data Analysis", "Research", "Compression Algorithms", "3D Visualization"],
+        "challenge": "Evaluating multiple codec implementations with varying architectures required developing a comprehensive testing framework and understanding complex compression algorithms at a deep level."
     }
 ]

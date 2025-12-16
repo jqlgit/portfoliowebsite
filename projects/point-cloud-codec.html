@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Cloud Codec Comparison - Justin Li</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/afe17cc76e.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="../contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post -->
+    <article class="blog-post">
+        <div class="container">
+            <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+            
+            <header class="blog-header">
+                <h1>Point Cloud Codec Comparison</h1>
+                <p class="blog-tagline">Comparative analysis of point cloud compression codecs including G-PCC and VTM-PCC</p>
+                <p class="blog-meta">Research Project</p>
+            </header>
+
+            <div class="blog-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" fill="none">
+                    <!-- Title -->
+                    <text x="150" y="12" font-size="11" font-weight="bold" text-anchor="middle" fill="currentColor">Performance Comparison</text>
+                    
+                    <!-- Chart 1: Speed Bars -->
+                    <g>
+                        <text x="50" y="28" font-size="8" fill="currentColor" opacity="0.7">Speed</text>
+                        <line x1="30" y1="35" x2="70" y2="35" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <!-- PCL (blue) -->
+                        <rect x="32" y="50" width="3" height="10" fill="#4B9CD3" opacity="0.8"/>
+                        <!-- Draco (red) -->
+                        <rect x="38" y="45" width="3" height="15" fill="#CC3168" opacity="0.8"/>
+                        <!-- MPEG-GPCC (yellow) -->
+                        <rect x="44" y="48" width="3" height="12" fill="#FFB84D" opacity="0.8"/>
+                        <!-- MPEG-VPCC (green) -->
+                        <rect x="50" y="30" width="3" height="30" fill="#2ECC71" opacity="0.8"/>
+                    </g>
+                    
+                    <!-- Chart 2: Compression Ratio (logarithmic) -->
+                    <g>
+                        <text x="150" y="28" font-size="8" fill="currentColor" opacity="0.7">Compression</text>
+                        <line x1="130" y1="35" x2="170" y2="35" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <!-- PCL (blue) -->
+                        <rect x="132" y="55" width="3" height="5" fill="#4B9CD3" opacity="0.8"/>
+                        <!-- Draco (red) -->
+                        <rect x="138" y="52" width="3" height="8" fill="#CC3168" opacity="0.8"/>
+                        <!-- MPEG-GPCC (yellow) -->
+                        <rect x="144" y="50" width="3" height="10" fill="#FFB84D" opacity="0.8"/>
+                        <!-- MPEG-VPCC (green) -->
+                        <rect x="150" y="32" width="3" height="28" fill="#2ECC71" opacity="0.8"/>
+                    </g>
+                    
+                    <!-- Chart 3: PSNR Quality -->
+                    <g>
+                        <text x="250" y="28" font-size="8" fill="currentColor" opacity="0.7">PSNR</text>
+                        <line x1="230" y1="35" x2="270" y2="35" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        <!-- Quality line -->
+                        <polyline points="232,48 238,45 244,46 250,42 256,48 262,40 268,50" 
+                                  stroke="currentColor" stroke-width="1.5" opacity="0.6" fill="none"/>
+                        <!-- Key point highlight -->
+                        <circle cx="256" cy="48" r="2" fill="#4B9CD3" opacity="0.9"/>
+                    </g>
+                    
+                    <!-- Legend -->
+                    <g font-size="7" opacity="0.6">
+                        <rect x="30" y="75" width="2" height="2" fill="#4B9CD3"/>
+                        <text x="35" y="77">PCL</text>
+                        
+                        <rect x="65" y="75" width="2" height="2" fill="#CC3168"/>
+                        <text x="70" y="77">Draco</text>
+                        
+                        <rect x="105" y="75" width="2" height="2" fill="#FFB84D"/>
+                        <text x="110" y="77">G-PCC</text>
+                        
+                        <rect x="155" y="75" width="2" height="2" fill="#2ECC71"/>
+                        <text x="160" y="77">V-PCC</text>
+                    </g>
+                    
+                    <!-- Research indicator -->
+                    <text x="150" y="105" font-size="7" text-anchor="middle" fill="currentColor" opacity="0.5">
+                        Codec Performance Analysis
+                    </text>
+                </svg>
+            </div>
+
+            <div class="blog-content">
+                <section class="blog-section">
+                    <h2>Abstract</h2>
+                    <p>
+                        This research project presents a comprehensive comparative analysis of modern point cloud compression codecs, with particular focus on Geometry-based Point Cloud Compression (G-PCC) and Video-based Point Cloud Compression (VTM-PCC) standards. The study evaluates compression efficiency, visual quality preservation, and computational performance across diverse real-world datasets, providing insights into optimal codec selection for different applications.
+                    </p>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Features</h2>
+                    <ul class="features-list">
+                        <li>Analysis of G-PCC (Geometry-based Point Cloud Compression)</li>
+                        <li>VTM-PCC (Video-based Point Cloud Compression) evaluation</li>
+                        <li>Compression ratio benchmarking across multiple datasets</li>
+                        <li>Quality assessment metrics and PSNR/rate analysis</li>
+                        <li>Performance comparison with visual quality preservation</li>
+                        <li>Detailed codec architecture analysis</li>
+                        <li>Real-world application recommendations</li>
+                    </ul>
+                </section>
+
+                <section class="blog-section">
+                    <h2>Tech Stack</h2>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Analysis</span>
+                        <span class="tech-tag">Research</span>
+                        <span class="tech-tag">Compression Algorithms</span>
+                        <span class="tech-tag">3D Visualization</span>
+                    </div>
+                </section>
+
+                <section class="blog-section blog-body">
+                    <h2>The Challenge</h2>
+                    <p>
+                        Point cloud data represents a revolutionary way to capture 3D environments, with applications ranging from autonomous vehicles to digital heritage preservation. However, the massive volume of geometric and color information generated by modern 3D scanners presents significant compression challenges. This project required developing a comprehensive framework to evaluate different compression approaches while understanding their architectural fundamentals.
+                    </p>
+
+                    <h3>Codec Architecture Analysis</h3>
+                    <p>
+                        <strong>G-PCC (Geometry-based Compression)</strong> focuses on the spatial distribution of points, employing octree-based hierarchical decomposition to identify and exploit geometric redundancy. This approach is particularly effective for sparse point clouds with irregular distributions, as it adaptively refines spatial resolution where point density is high.
+                    </p>
+                    <p>
+                        <strong>VTM-PCC (Video-based Compression)</strong> transforms the 3D point cloud problem into a 2D video compression problem by projecting points onto multiple 2D planes and encoding them as video sequences. By leveraging mature video codec technologies (like HEVC), VTM-PCC achieves high compression ratios at the cost of requiring careful projection and attribute mapping.
+                    </p>
+
+                    <h3>Evaluation Methodology</h3>
+                    <p>
+                        The comparative analysis involved constructing test suites with diverse point cloud characteristics:
+                    </p>
+                    <ul>
+                        <li><strong>Dense Indoor Scans:</strong> High-resolution LiDAR captures with uniform point distribution</li>
+                        <li><strong>Sparse Outdoor Data:</strong> Aerial and autonomous vehicle sensor data with irregular patterns</li>
+                        <li><strong>Man-made Objects:</strong> CAD-like structured point clouds with repetitive geometry</li>
+                        <li><strong>Organic Structures:</strong> Natural scenes with complex, irregular point distributions</li>
+                    </ul>
+
+                    <h3>Key Findings</h3>
+                    <p>
+                        The analysis revealed distinct trade-offs between the two codec families:
+                    </p>
+                    <ul>
+                        <li><strong>Compression Efficiency:</strong> VTM-PCC achieved superior compression ratios (up to 100:1) on dense, regularly distributed point clouds, while G-PCC performed better on sparse, irregular data</li>
+                        <li><strong>Visual Quality:</strong> G-PCC preserves geometric accuracy better, essential for precision applications; VTM-PCC introduces slight distortions due to projection and reprojection</li>
+                        <li><strong>Computational Cost:</strong> G-PCC requires less computational overhead for encoding/decoding; VTM-PCC leverages existing video codec optimizations but demands more preprocessing</li>
+                        <li><strong>Attribute Handling:</strong> Both codecs handle color and intensity attributes, but with different efficiency trade-offs</li>
+                    </ul>
+
+                    <h3>Real-World Applications</h3>
+                    <p>
+                        The findings led to practical recommendations for different application domains:
+                    </p>
+                    <ul>
+                        <li><strong>Autonomous Vehicles:</strong> G-PCC preferred due to superior geometry preservation and lower latency requirements</li>
+                        <li><strong>Digital Archives:</strong> VTM-PCC suitable for high compression ratios in storage-constrained scenarios</li>
+                        <li><strong>Telepresence:</strong> G-PCC for real-time applications requiring low computational overhead</li>
+                        <li><strong>3D Reconstruction:</strong> Codec selection depends on input density and desired reconstruction fidelity</li>
+                    </ul>
+
+                    <h3>Future Directions</h3>
+                    <p>
+                        The research identified emerging trends in point cloud compression: adaptive codec selection based on point cloud characteristics, learned compression techniques using neural networks, and hybrid approaches combining strengths of both geometry and video-based methods. The standardization of next-generation codecs continues to evolve, with potential for neural network-based approaches to significantly improve compression-quality trade-offs.
+                    </p>
+                </section>
+            </div>
+
+            <footer class="blog-footer">
+                <div class="blog-links">
+                    <a href="../portfolio.html" class="btn-secondary">&larr; Back to Portfolio</a>
+                </div>
+            </footer>
+        </div>
+    </article>
+
+    <script src="../js/shared.js"></script>
+</body>
+</html>
