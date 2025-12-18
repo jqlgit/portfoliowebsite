@@ -127,24 +127,6 @@
         "challenge": "Integrating nutrition data for 1200+ items while maintaining app performance required efficient data structures and caching strategies."
     },
     {
-        "id": "data-structures",
-        "title": "Data Structures and Algorithms",
-        "category": "Educational Project",
-        "description": "Demonstrate expertise in Binary Search Trees, algorithms, Trie structures, Red-Black Trees, Linked Lists, arrays, stacks, queues, graphs, and various sorting techniques.",
-        "url": "projects/data-structures.html",
-        "fullDescription": "A comprehensive project showcasing deep understanding of fundamental data structures and algorithms with optimized implementations.",
-        "features": [
-            "Binary Search Tree implementation with balancing",
-            "Trie data structure for efficient string searches",
-            "Red-Black Tree self-balancing implementation",
-            "Graph algorithms including DFS and BFS",
-            "Multiple sorting algorithms (Merge Sort, Quick Sort, Heap Sort)",
-            "Time and space complexity analysis"
-        ],
-        "techStack": ["Java", "Data Structures", "Algorithms"],
-        "challenge": "Implementing self-balancing trees while maintaining optimal time complexity required studying various balancing techniques."
-    },
-    {
         "id": "stock-trading",
         "title": "Stock Trading App",
         "category": "Web Application",
