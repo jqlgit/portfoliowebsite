@@ -73,7 +73,8 @@
             "4000+ internal user site visits"
         ],
         "techStack": ["Vue.js", "Nuxt.js", "Ruby on Rails", "Rails API", "PostgreSQL", "Splunk"],
-        "challenge": "Implementing complex admin features while ensuring the CMS remained robust and user-friendly required careful planning of edge cases and comprehensive testing."
+        "challenge": "Implementing complex admin features while ensuring the CMS remained robust and user-friendly required careful planning of edge cases and comprehensive testing.",
+        "disabled": true
     },
     {
         "id": "porch",
