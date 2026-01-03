@@ -5,7 +5,9 @@ let projectsData = [];
 async function loadProjects() {
     try {
         const response = await fetch('data/projects.json');
-        projectsData = await response.json();
+        const allProjects = await response.json();
+        // Filter out disabled projects
+        projectsData = allProjects.filter(p => !p.disabled);
         return projectsData;
     } catch (error) {
         console.error('Error loading projects:', error);

@@ -54,7 +54,8 @@
             "90% use case coverage with improved delivery speed"
         ],
         "techStack": ["Ansible", "Python", "Spring Boot", "Helix", "Splunk", "ServiceNow", "BigPanda", "Apache Kafka"],
-        "challenge": "Developing a robust error detection and correction system that works across diverse middleware environments required extensive regex pattern design and Kafka topic architecture optimization."
+        "challenge": "Developing a robust error detection and correction system that works across diverse middleware environments required extensive regex pattern design and Kafka topic architecture optimization.",
+        "disabled": true
     },
     {
         "id": "iu-commons",
